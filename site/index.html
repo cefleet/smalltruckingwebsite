@@ -7,8 +7,16 @@
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src='script.js'></script>
   <style>
+  body {
+    background: url(img/truckBG.png) no-repeat left top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: auto 100%;
+  }
     .adbg {
       background-image : url('img/bg2.jpg');
       background-repeat: no-repeat;
@@ -20,15 +28,154 @@
       background-repeat : no-repeat;
       padding : 10px inherit;
     }
+    a {
+      cursor:pointer;
+    }
   </style>
 </head>
 <body>
-  <div class='container'>
+  <div class='container-fluid'>
     <div class='page-header'>
-      <h1>Small Trucking Comapnies | <small>229-891-3498</small><small class='pull-right'>info@smalltruckingcompanies.com</small></h1>
+      <h1 id='main'>Small Trucking Companies | <small>229-891-3498</small><small class='pull-right'>info@smalltruckingcompanies.com</small></h1>
+    </div>
+    <div id='title'>
+      <div class='row'>
+        <div class='col-md-3'></div>
+        <div class='col-md-8'>
+          <div class='well'>
+            <h3>Small Trucking Companies <small> has a goal to connect drivers with smaller trucking companies.</small></h3>
+            <p>We work for the drivers and for the companies. Our hope is to help drivers find the job they want while providing services to the smaller companies that normally only large companies can afford.</p>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-3'></div>
+        <div class='col-md-4'>
+          <a id='goto_drivers'>
+            <img class='center-block' src='img/driversButton.png'>
+            <h2 class="text-center">Truck Drivers</h2>
+          </a>
+        </div>
+        <div class='col-md-4'>
+          <a id='goto_companies'>
+            <img class='center-block' src='img/companiesButton.png'>
+            <h2 class="text-center" >Trucking Companies</h2>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id='drivers' style='display:none'>
+      <div class='row'>
+        <div class='col-md-3'></div>
+        <div class='col-md-8'>
+          <a class='goback'>
+            <h2><span class="glyphicon glyphicon-chevron-left"></span> Back</h2>
+          </a>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-3'></div>
+        <div class='col-md-4' style='overflow:hidden'>
+          <img class='center-block' src='img/happyDriver.jpg' />
+        </div>
+        <div class='col-md-5'>
+          <div class='well'>
+            <h4>We know.<br /><small>You want to work for a small trucking company.</small></h3>
+            <p>For many truck driver being being known by thier company as a number, and nobody even knowing their name is just fine.</p>
+            <p>However for many drivers they know that they are happiest when their dispatcher knows their name. Or if the company owner asks about their kids, or gladly give you time off when your mother is ill</p>
+            <p>As a driver you can only find that type of treatment from a small company, and small company driver positions is exactly what we are striving to help you find.</p>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+          <h2 class='text-center crossing'>Let US help you get the job YOU want!<h2>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-3'></div>
+        <div class='col-md-9'>
+          <div class='well'>
+            <h4 class='text-center'>There are many benefits to working for a small trucking company</h4>
+            <div class='col-md-4'>
+              <p>The communication is better!</p>
+            </div>
+            <div class='col-md-4'>
+              <p>There is less stress!</p>
+            </div>
+            <div class='col-md-4'>
+              <p>You are known by name and are a vital part of the operations and future of the comapny</p>
+            </div>
+            <div class='clearfix'></div>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+          <h2 class='text-center crossing'>You can apply online or by the phone.<h2>
+          </div>
+        </div>
+      <div class='row'>
+        <div class='col-md-3'></div>
+        <div class='col-md-7'>
+          <div class='col-md-6'>
+            <h3>Featured Companies</h3>
+            <ul class='list-group'>
+              <li class='list-group-item'>
+                <span class='badge'>3 favorites</span>
+                Johns Trucking
+              </li>
+              <li class='list-group-item'>
+                <span class='badge'>4 favorites</span>
+                McKarmic Trucking Company
+              </li>
+              <li class='list-group-item'>
+                <span class='badge'>4 favorites</span>
+                Cole Logistics Inc.
+              </li>
+              <li class='list-group-item'>
+                More ...<span class='glyphicon glyphicon-arrow-right'></span>
+              </li>
+            </ul>
+          </div>
+          <div class='col-md-6'>
+            <h3>Most Active Regions</h3>
+            <ul class='list-group'>
+              <li class='list-group-item'>
+                <span class='badge'>54 openings</span>
+                South Texas
+              </li>
+              <li class='list-group-item'>
+                <span class='badge'>24 openings</span>
+                Midwest
+              </li>
+              <li class='list-group-item'>
+                <span class='badge'>16 openings </span>
+                Northeast
+              </li>
+              <li class='list-group-item'>
+                Find My Region<span class='glyphicon glyphicon-search'></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='col-md-2'>
+        <a class='btn btn-warning btn-lg btn-block'>Apply Now</a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id='companies' style='display :none'>
+    <div class='row'>
+      <div class='col-md-3'></div>
+      <div class='col-md-8'>
+        <a class='goback'>
+          <h2><span class="glyphicon glyphicon-chevron-left"></span> Back</h2>
+        </a>
+      </div>
     </div>
     <div class='row'>
-      <div class='col-md-2'></div>
+      <div class='col-md-3'></div>
       <div class='col-md-8'>
         <div class='col-md-6' style='overflow:hidden'>
           <img src='img/man_in_front_of_trucks_sm.jpg'/>
@@ -41,7 +188,6 @@
             <h4 class='pull-right'>We Do.</h4>
         </div>
       </div>
-        <div class='col-md-2'></div>
 
     </div>
     <div class='row'>
@@ -50,35 +196,25 @@
       </div>
     </div>
     <div class='row'>
-      <div class='col-md-2'></div>
+      <div class='col-md-3'></div>
       <div class='col-md-8'>
         <div class='well'>
           <h4 class='text-center'>Truck drivers are in high demand thes days.</h4>
-
-          <div class='col-md-4'>
             <p>In order to get the highest quality drivers you must be able to compete with larger companies with large recruiting budgets.</p>
-          </div>
-          <div class='col-md-4'>
-              <p>That is where we come in. We use the same recuting tools that the large trucking companies use to attract drivers and make it as easy as possible to apply for open positions.</p>
-          </div>
-          <div class='col-md-4'>
+            <p>That is where we come in. We use the same recuting tools that the large trucking companies use to attract drivers and make it as easy as possible to apply for open positions.</p>
             <p>With the time saved you can focus on the things that really matter to your company.</p>
-          </div>
           <div class='clearfix'></div>
           <h4 class='text-center'>Using our service gives you the same chance to get good hires as the large companies.</h4>
         </div>
       </div>
-      <div class='col-md-2'></div>
     </div>
-    <div class='row'>
-
     <div class='row'>
       <div class='col-md-12'>
         <h2 class='text-center crossing'>Spend your valuable time running your company<h2>
       </div>
     </div>
     <div class='row'>
-      <div class='col-md-2'></div>
+      <div class='col-md-3'></div>
       <div class='col-md-8'>
         <div class='col-md-6'>
           <h3>Here is what we can do for you:</h3>
@@ -95,15 +231,12 @@
           <img src='img/woman_truck_driver_sm.jpg'/>
         </div>
       </div>
-      <div class='col-md-2'></div>
     </div>
-      <div class='col-md-12'>
-        <h2 class='text-center crossing'>Conerned about bringing on a new staff member to drive your trucks?</h2>
-      </div>
+    <div class='col-md-12'>
+      <h2 class='text-center crossing'>Conerned about bringing on a new staff member to drive your trucks?</h2>
     </div>
-
     <div class='row'>
-      <div class='col-md-2'></div>
+      <div class='col-md-3'></div>
       <div class='col-md-8'>
       <div class='col-md-4' style='overflow:hidden'>
         <img src='img/man_in_front_of_truck_sm.jpg' />
@@ -112,7 +245,7 @@
           <h4 >How about we get you a temp-to-hire driver?</h4>
         <div class='well'>
           <p>
-            With our temp-to-hire program we can get a driver in your truck at a much lower risk to your company then hiring a new staff member. We will cover the driver's compensation, taxes and fees, and worker comp insurance. You just get one monthly bill.          </p>
+            With our temp-to-hire program we can get a driver in your truck at a much lower risk to your company than hiring a new staff member. We will cover the driver's compensation, taxes and fees, and worker comp insurance. You just get one monthly bill.          </p>
           <p>
             If the driver is not up to your expectation then let us know
             and we handle the termination.
@@ -123,8 +256,8 @@
         </div>
       </div>
     </div>
-      <div class='col-md-2'></div>
     </div>
+  </div>
     <div class='row'>
       <div class='col-md-12'>
         <h2>
