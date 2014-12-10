@@ -1,0 +1,8 @@
+{
+  "name": "smalltruckingcompanies",
+  "description": "Small Trucking Companies",
+  "version": "0.0.1",
+  "dependencies": {
+    "express":"*"
+  }
+}
